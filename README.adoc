@@ -1,0 +1,14 @@
+= Ngrok Spring Boot Starter
+
+Once ready, this https://projects.spring.io/spring-boot/[Spring Boot] starter will make it easy to use
+https://ngrok.com/[ngrok] secure tunnel to expose the local ports of a Spring Boot application. This
+can be useful for:
+
+* running live demos from a laptop
+* developing webhooks
+* etc.
+
+== License
+
+Ngrok Spring Boot Starter is Open Source software released under the
+http://www.apache.org/licenses/LICENSE-2.0.html[Apache 2.0 license].
