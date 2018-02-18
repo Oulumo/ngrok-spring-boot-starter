@@ -1,8 +1,8 @@
-package com.oulumo.ngrok.retrofit;
+package com.oulumo.ngrok.client;
 
-import com.oulumo.ngrok.retrofit.dto.Tunnel;
-import com.oulumo.ngrok.retrofit.dto.TunnelCreationRequest;
-import com.oulumo.ngrok.retrofit.dto.TunnelListResponse;
+import com.oulumo.ngrok.client.dto.Tunnel;
+import com.oulumo.ngrok.client.dto.TunnelCreationRequest;
+import com.oulumo.ngrok.client.dto.TunnelListResponse;
 import retrofit2.Call;
 import retrofit2.http.*;
 

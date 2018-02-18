@@ -1,1 +1,2 @@
-include ':ngrok-spring-boot-starter '
+include ':ngrok-client'
+include ':ngrok-spring-boot-starter'

@@ -1,7 +1,6 @@
-package com.oulumo.ngrok.retrofit;
+package com.oulumo.ngrok.client;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.oulumo.ngrok.retrofit.dto.Tunnel;
+import com.oulumo.ngrok.client.dto.Tunnel;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -9,7 +8,8 @@ import org.junit.Test;
 import java.util.List;
 
 import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.*;
+import static org.hamcrest.Matchers.is;
+import static org.hamcrest.Matchers.notNullValue;
 
 /**
  * @author Zsolt Homorodi (zsolt.homorodi@oulumo.com)
@@ -22,8 +22,7 @@ public class NgrokClientTest {
 
     @BeforeClass
     public static void setup() throws Exception {
-        ObjectMapper objectMapper = new ObjectMapper();
-        ngrokClient = new NgrokClient(objectMapper);
+        ngrokClient = new NgrokClient();
     }
 
     @AfterClass

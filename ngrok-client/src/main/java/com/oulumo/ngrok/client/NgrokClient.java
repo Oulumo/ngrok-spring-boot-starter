@@ -1,11 +1,9 @@
-package com.oulumo.ngrok.retrofit;
+package com.oulumo.ngrok.client;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.oulumo.ngrok.retrofit.dto.*;
+import com.oulumo.ngrok.client.dto.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 import retrofit2.Call;
 import retrofit2.Response;
 import retrofit2.Retrofit;
@@ -17,17 +15,15 @@ import java.util.List;
 /**
  * @author Zsolt Homorodi.
  */
-@Component
 public class NgrokClient {
     private static final Logger log = LoggerFactory.getLogger(NgrokClient.class);
 
     private INgrokClientApi clientApi;
 
-    @Autowired
-    public NgrokClient(ObjectMapper objectMapper) {
+    public NgrokClient() {
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl("http://localhost:4040")
-                .addConverterFactory(JacksonConverterFactory.create(objectMapper))
+                .addConverterFactory(JacksonConverterFactory.create(new ObjectMapper()))
                 .build();
 
         clientApi = retrofit.create(INgrokClientApi.class);

@@ -1,0 +1,21 @@
+buildscript {
+}
+
+dependencies {
+    // Retrofit framework
+    compile group: 'com.squareup.retrofit2', name: 'retrofit', version: retrofitVersion
+    compile group: 'com.squareup.retrofit2', name: 'converter-jackson', version: retrofitVersion
+
+    // SLF4J Logging
+    compile group: 'org.slf4j', name: 'slf4j-api', version: slf4jVersion
+
+    testCompile group: 'junit', name: 'junit', version: jUnitVersion
+    testCompile group: 'org.hamcrest', name: 'hamcrest-library', version: hamcrestVersion
+    testCompile group: 'ch.qos.logback', name: 'logback-classic', version: logbackVersion
+}
+
+test {
+    testLogging {
+        exceptionFormat = 'full'
+    }
+}

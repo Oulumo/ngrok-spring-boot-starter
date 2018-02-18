@@ -1,6 +1,6 @@
 ext {
     versionMajor = 0
-    versionMinor = 1
+    versionMinor = 2
     versionPoint = 0
 }
 
@@ -8,9 +8,9 @@ buildscript {
     ext {
         logbackLoglevel='DEBUG'
 
-        springBootVersion = '1.5.3.RELEASE'
-        springVersion = '4.3.8.RELEASE'
-        jacksonVersion='2.8.8'
+        springBootVersion = '1.5.10.RELEASE'
+        springVersion = '4.3.14.RELEASE'
+        jacksonVersion='2.7.2'
         retrofitVersion='2.3.0'
         slf4jVersion='1.7.25'
         logbackVersion='1.2.3'
@@ -22,7 +22,6 @@ buildscript {
   	    jcenter()
     }
     dependencies {
-        classpath "net.sf.gapt:apt:1"
         classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.7.3'
     }
 }
@@ -45,7 +44,6 @@ subprojects {
 
     apply plugin: 'maven'
     apply plugin: 'java'
-    apply plugin: 'net.sf.gapt'
 
     sourceCompatibility = 1.8
     targetCompatibility = 1.8

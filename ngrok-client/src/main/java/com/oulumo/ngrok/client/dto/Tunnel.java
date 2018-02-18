@@ -1,4 +1,4 @@
-package com.oulumo.ngrok.retrofit.dto;
+package com.oulumo.ngrok.client.dto;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
